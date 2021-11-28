@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<body>
+    <script>
+      var todo=[];  
+      function add_todo_item(new_item){
+          todo.push(new_item);
+
+          
+      }
+      function show_list(){
+          for(var i=0;i<=todo.length;i++)
+          console.log(todo[i]);
+      }
+      function edit_item(item){
+             var i=prompt("enter the index you want to edit");    
+             todo[i]=item;
+          
+      }
+          
+       function delete_item(item){
+           for(var i=0;i<=todo.length;i++){
+               if(todo[i]==item)
+               todo.splice(i,1);     
+
+           }
+           
+       }  
+       function check_item(item){
+           for(var i=0;i<=todo.length;i++){
+               if(todo[i]==item)
+                 console.log("✔");
+
+           }   
+            
+       } 
+      
+      
+
+    </script>
+    
+</body>
+</html>
